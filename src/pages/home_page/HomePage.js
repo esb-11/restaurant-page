@@ -1,30 +1,22 @@
-export default (function () {
-    const LOGO = "Meio Dia Delivery";
-    const HEADLINE = "Bem-vindos ao melhor delivery da cidade";
-    const OPINIONS = ["Comida saborosa por um valor acessível, dá pra perceber o carinho que é colocado em cada marmita."];
-    const WORKING_HOURS = "Todos os dias de 10:00 às 16:00.";
+import Page from "../Page.js";
 
-    const home = document.createElement("div");
-    home.classList.add("home-page");
-    home.appendChild(createPageElement(LOGO, "logo"));
-    home.appendChild(createPageElement(HEADLINE, "headline"));
-    home.appendChild(createOpinions(OPINIONS));
-    home.appendChild(createPageElement(WORKING_HOURS, "working_hours"));
+const homePage = new Page("homepage");
 
-    function createPageElement(str, divClass) {
-        const div = document.createElement("div");
-        div.innerText = str;
-        div.classList.add(divClass);
-        return div;
-    }
+const content = `
+<div class="homepage">
+    <div class="logo">Meio Dia Delivery</div>
+    <div class="headline">Bem-vindos ao melhor delivery da cidade</div>
+    <div class="opinions-section">
+        <div class="opinions-section-title">Opiniões</div>
+        <div class="opinions">
+            <div class="opinion">Comida boa</div>
+            <div class="opinion">top de mil</div>
+        </div>
+    </div>
+    <div class="working-hours">Todos os dias de 10:00 às 16:00.</div>
+</div>
+`;
 
-    function createOpinions(array) {
-        const opinionsDiv = document.createElement("div");
-        array.forEach((op) => {
-            opinionsDiv.appendChild(createPageElement(op, "opinion"));
-        });
-        return opinionsDiv;
-    }
+homePage.addContent(content);
 
-    return home;
-})();
+export default homePage;
