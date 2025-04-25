@@ -1,4 +1,4 @@
-import { createElement, createNestedElement, setPageContent } from "./pageModule";
+import { createNestedElement } from "./pageModule";
 
 const logo = {
     type: "div",
