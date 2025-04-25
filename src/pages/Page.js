@@ -1,14 +1,18 @@
 export default class Page {
     #div;
     
-    constructor(divClass) {
+    constructor(content) {
         this.#div = document.createElement("div");
-        this.#div.classList.add(divClass);
+        this.setContent(content);   
     }
 
-    addContent(content) {
+    setContent(content) {
         this.#div.innerHTML = content;
     }
+
+    getContent() {
+        return this.#div.innerHTML;
+    };
 
     display() {
         const content = document.querySelector('#content');
