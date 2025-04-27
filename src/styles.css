@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Herr+Von+Muellerhoff&family=Montserrat:wght@300;400;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    background-image: url("./background.jpg");
+    background-size: cover;
+}
+
+body {
+    display: grid;
+    grid-auto-rows: 2fr 22fr 1fr;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-bottom: 2px solid #c59d5f;
+}
+
+header > nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+header > nav > button {
+    padding: 8px;
+    font-size: 16px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    border-top: 2px solid #c59d5f;
+}
+
+button {
+    background-color: #c59d5f;
+    color: white;
+    border: none;
+    font-weight: bold;
+    border-radius: 16px;
+}
+
+#content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#content > :first-child {
+    width: 600px;
+    height: 100%;
+    
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 1px solid #c59d5f;
+}
+
+.home-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-page-logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-upper-text {
+    font-size: 150px;
+    font-family: "Herr Von Muellerhoff", cursive;
+    line-height: 64px;
+    color: #c59d5f;
+}
+
+.logo-bottom-text {
+    font-size: 64px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.open-menu-button {
+    margin: 32px;
+    padding: 8px;
+    font-size: 16px;
+}
+
+.menu-title {
+    font-size: 64px;
+    font-family: "Herr Von Muellerhoff", cursive;
+    color: #c59d5f;
+    text-align: center;
+}
+
+.menu-container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+.menu-item {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    width: fit-content;
+}
+
+.menu-item-name {
+    color: #c59d5f;
+    font-weight: bold;
+    padding: 8px;
+
+    background-color: black;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+}
+
+.menu-item-description {
+    padding: 8px;
+}
