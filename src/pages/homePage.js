@@ -10,7 +10,7 @@ const logo = {
         },
         {
             type: "div",
-            content: "na Brasa",
+            content: "NA BRASA",
             classes: ["logo-bottom-text"]
         }
     ],
